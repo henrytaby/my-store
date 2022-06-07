@@ -1,4 +1,21 @@
 
+<!--
+-------------------------------------------------------------------
+-->
+<hr />
+<h1>Ng Model</h1>
+<p>Nombre {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"  />
+<p>Valid: {{nameInput.valid}}</p>
+
+<p>Nombre {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"  />
+<p>Valid: {{ageInput.valid}}</p>
+
+<!--
+-------------------------------------------------------------------
+-->
+<hr />
 <h1>Eventos</h1>
 
 <button [disabled]="btnDisabled">Enviar</button>
@@ -13,7 +30,9 @@
 
 <p>Nombre {{person.name}}</p>
 <input type="text" [value]="person.name"  (keyup)="changeName($event)"/>
-
+<!--
+-------------------------------------------------------------------
+-->
 <hr>
 <h1>Propiedades</h1>
 
@@ -28,8 +47,9 @@
 <progress max="100" [value]="person.age"></progress>
 <img [src]="person.avatar" width="100">
 
-
-
+<!--
+-------------------------------------------------------------------
+-->
 <hr/>
 <h1>Hola mundo</h1>
 <h2>{{'Hola Mundo '.repeat(5)}}</h2>
