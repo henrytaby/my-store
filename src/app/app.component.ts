@@ -18,14 +18,18 @@ export class AppComponent {
   };
 
 
+  names: string[] = ['Henry','Andrea','Juan'];
+  newName = '';
+
+
   toglleButton(){
     this.btnDisabled  = !this.btnDisabled;
   };
 
   increaseAge(){
     this.person.age +=1;
-
   }
+
   onScroll(event: Event){
     const element = event.target as HTMLElement;
     console.log(element.scrollTop);
@@ -34,4 +38,14 @@ export class AppComponent {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
   }
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.names.splice(index,1);
+  }
+
 }
