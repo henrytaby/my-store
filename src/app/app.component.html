@@ -2,7 +2,31 @@
 -------------------------------------------------------------------
 -->
 <hr />
-<h1>*so de ngSwitch</h1>
+<h1>Class and style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"  />
+
+<p class="message-error" [class.invalid]="nameInput2.invalid">
+  El Campo es requerido
+</p>
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name"  />
+<p [style.font-style]="nameInput3.invalid?'italic':'normal'">
+  Texto Texto Texto
+</p>
+
+
+
+<div class="styles">
+  <div><input type="text" [(ngModel)]="widthImg"  /></div>
+  <div><img [style.width.%]="widthImg" [src]="person.avatar" width="100">  </div>
+</div>
+
+<!--
+-------------------------------------------------------------------
+-->
+<hr />
+<h1>Uso de ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name"  />
 
 <div [ngSwitch]="person.name">
@@ -103,6 +127,8 @@
 
 <input type="text" [value]="person.name"  />
 <progress max="100" [value]="person.age"></progress>
+
+
 <img [src]="person.avatar" width="100">
 
 <!--
