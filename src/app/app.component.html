@@ -18,12 +18,14 @@
 <hr />
 <h1>*ngFor Objs</h1>
 
-
+<diV class="products--grid">
 <div *ngFor="let product of products">
-  <img width="250" [src]="product.image" alt="image">
+  <img [src]="product.image" alt="image">
   <h2>{{ product.price }}</h2>
   <p>{{ product.name }}</p>
 </div>
+</diV>
+
 <!--
 -------------------------------------------------------------------
 -->
@@ -115,4 +117,4 @@
   Hola, soy {{name}} y tengo {{age}} año
 </h3>
 
-<img src="{{img}}">
+<img width="100" src="{{img}}">
