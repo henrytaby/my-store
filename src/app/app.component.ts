@@ -26,7 +26,7 @@ export class AppComponent {
     {
       name: 'EL mejor juguete',
       price: 565,
-      image: './assets/ /toy.jpg',
+      image: './assets/images/toy.jpg',
       category: 'All',
     },
     {
