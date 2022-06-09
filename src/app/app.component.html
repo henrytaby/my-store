@@ -2,6 +2,20 @@
 -------------------------------------------------------------------
 -->
 <hr />
+<h1>*so de ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name"  />
+
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Henry'">Hola  {{person.name}} de Cochabamba</p>
+  <p *ngSwitchCase="'Andrea'">Hola  {{person.name}} de La Paz</p>
+  <p *ngSwitchCase="'Maria'">Hola  {{person.name}} de Oruro</p>
+  <p *ngSwitchDefault>Hola  {{person.name}} no se de donde eres</p>
+</div>
+
+<!--
+-------------------------------------------------------------------
+-->
+<hr />
 <h1>*ngFor Objs</h1>
 
 
