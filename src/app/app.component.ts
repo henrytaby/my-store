@@ -14,6 +14,13 @@ export class AppComponent {
   age = 42;
   img = "https://pbs.twimg.com/profile_images/505039074529275907/r3aPsQOK_400x400.png";
   btnDisabled = true;
+
+  register = {
+    name:'',
+    email:'',
+    password:''
+  }
+
   person = {
     name: 'Henry Taby',
     age: 42,
@@ -89,6 +96,10 @@ export class AppComponent {
 
   deleteName(index: number){
     this.names.splice(index,1);
+  }
+
+  onRegister(){
+    console.log(this.register);
   }
 
 }

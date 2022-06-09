@@ -2,6 +2,30 @@
 -------------------------------------------------------------------
 -->
 <hr />
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+    <label>Nombre</label>
+    <input type="text" name="name" required [(ngModel)]="register.name" />
+    <p>Mensaje de error</p>
+  </div>
+  <div class="input-group">
+    <label>Email</label>
+    <input type="email" name="email" required [(ngModel)]="register.email" />
+    <p>Mensaje de error</p>
+  </div>
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" name="password" required [(ngModel)]="register.password" />
+    <p>Mensaje de error</p>
+  </div>
+  <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+</form>
+
+<!--
+-------------------------------------------------------------------
+-->
+<hr />
 <h1>NgClass y NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name"  />
 <hr class="line-error"
@@ -25,8 +49,6 @@
     }"></div>
   </div>
 </div>
-
-
 
 <!--
 -------------------------------------------------------------------
